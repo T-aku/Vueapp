@@ -1,5 +1,9 @@
-<h1>Hello!</h1>
+<h1>ぐるなび</h1>
 
-<div id='hello'>
-  {{message}}
+<div id="hello">
+  <input type="text" v-model="search">
+  <input type="button" value="search" v-on:click="onclick">
+  
+  <p>{{ allstores }}</p>
+  <p v-for="message in messages">{{message.name}}</p>
 </div>
