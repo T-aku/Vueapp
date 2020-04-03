@@ -1,9 +1,19 @@
-<h1>ぐるなび</h1>
-
-<div id="hello">
-  <input type="text" v-model="search">
-  <input type="button" value="search" v-on:click="onclick">
-  
-  <p>{{ allstores }}</p>
-  <p v-for="message in messages">{{message.name}}</p>
+<div class="welcomepage">
+  <a class="title">ぐるなび</a>
+  <div id="hello">
+    <div class="searcharea">
+      <input type="text" class="freewordsearch" v-model="search">
+      <input type="button" value="search" v-on:click="onclick">
+    </div>
+    <p>{{ allstores }}</p>
+    
+    <div class="content" v-for="(message, index) in messages">
+      <a v-bind:href="message.url">{{message.name}}</a>
+      <input type="button" value="View" v-on:click="mapclick(index)">
+      <div v-bind:id="index"></div>
+    </div>
+  </div>
 </div>
+<script>
+  
+</script> 
